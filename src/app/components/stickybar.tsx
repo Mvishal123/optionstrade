@@ -3,7 +3,7 @@ import React from "react";
 
 const StickyBar = () => {
   return (
-    <div className="w-screen fixed bottom-0 h-10 border-t bg-slate-100">
+    <div className="w-screen fixed bottom-0 h-10 border-t bg-slate-100 z-[100]">
       <div className="flex justify-between h-full">
         <div className="flex h-full divide-x-2 px-12">
           {BOTTOM_OPTIONS_1.map((option, index) => (
