@@ -7,9 +7,8 @@ import TableHeader from "./table-header";
 import TableItem from "./table-item";
 
 const Table = () => {
-  const [data, setData] = React.useState(
-    TABLE_DATA.sort((a, b) => a.strike - b.strike)
-  );
+  const data = TABLE_DATA.sort((a, b) => a.strike - b.strike);
+
   const target_strike = binarySearch(
     data.map((data) => data.strike),
     CURRENT_STRIKE
@@ -22,7 +21,7 @@ const Table = () => {
       <TableHeader />
       <div className="">
         {data.map((item, index) => {
-          let side: "CALLS" | "PUTS" | "NONE" =
+          const side: "CALLS" | "PUTS" | "NONE" =
             index < target_strike
               ? "CALLS"
               : index > target_strike

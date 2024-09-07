@@ -62,7 +62,3 @@ const Topbar = () => {
 };
 
 export default Topbar;
-
-const Seperator = () => {
-  return <div className="h-full w-[1px] bg-slate-500" />;
-};
